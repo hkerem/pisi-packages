@@ -1,5 +1,5 @@
 PISI Packages
 =================================
-In order to build a package, calling
+In order to build a package, you should call
  pisi build pspec.xml
-on a Pardus system is enough.
+on a Pardus system.
