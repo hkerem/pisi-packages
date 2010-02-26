@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mysql++</Name>
+        <Homepage>http://tangentsoft.net/mysql++/</Homepage>
+        <Packager>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Packager>
+        <License>LGPL</License>
+        <IsA>programming.library</IsA>
+        <Summary>C++ wrapper for the MySQL C API</Summary>
+        <Description>MySQL++ makes working with MySQL server queries as easy as working
+with STL containers.  This package contains only the libraries needed to
+run MySQL++-based programs.  If you are building your own MySQL++-based
+programs, you also need to install the -devel package.</Description>
+        <Archive sha1sum="1d854e7c0f5e8615b440a20de67c84ab667c7536" type="targz">
+            http://tangentsoft.net/mysql++/releases/mysql++-3.0.9.tar.gz
+        </Archive>
+        <BuildDependencies>
+            <Dependency>mysql-lib</Dependency>
+        </BuildDependencies>
+        <!--
+        <Patches>
+            <Patch level=""></Patch>
+        </Patches>
+        -->
+    </Source>
+
+    <Package>
+        <Name>mysql++</Name>
+        <RuntimeDependencies>
+            <Dependency>mysql-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <!--
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target=""></AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script=""></COMAR>
+        </Provides>
+        -->
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-02-26</Date>
+            <Version>3.0.9</Version>
+            <Comment>First release.</Comment>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Update>
+    </History>
+</PISI>
+
