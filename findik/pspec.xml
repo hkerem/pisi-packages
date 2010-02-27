@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>findik</Name>
+        <Homepage>http://findikproject.org/</Homepage>
+        <Packager>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>server.contentfilter</IsA>
+        <Summary>FINDIK is a free open-source content filtering framework for TCP protocols.</Summary>
+        <Description>Main objective of the project is to develop a secure, generic infrastructure for protocol integration and support common communication techniques. In order to avoid users to reimplement communication and proxying algorithms, FINDIK API enforce user to work in a very simple and service oriented way. As a result, user could be focused on just protocol implementation and filtering operations.</Description>
+        <Archive sha1sum="e1a0aefe88db440924629b70a6c7f196675396f6" type="targz">
+            http://192.168.1.117/findik-0.2h.tar.gz
+        </Archive>
+        <BuildDependencies>
+            <Dependency>mysql++</Dependency>
+            <Dependency>log4cxx</Dependency>
+            <Dependency>libconfig</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>findik</Name>
+        <RuntimeDependencies>
+            <Dependency>mysql++</Dependency>
+            <Dependency>log4cxx</Dependency>
+            <Dependency>libconfig</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>boost</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/var/log/findik</Path>
+        </Files>
+        <!--
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target=""></AdditionalFile>
+        </AdditionalFiles>
+        -->
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-02-27</Date>
+            <Version>0.2h</Version>
+            <Comment>First release.</Comment>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Update>
+    </History>
+</PISI>
+
