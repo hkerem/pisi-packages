@@ -21,7 +21,8 @@ serviceDesc = _({"en": "FINDIK Content Filter",
 @synchronized
 def start():
 #    check_config()
-    startService(command="/usr/bin/findik -d",
+    startService(command="/usr/bin/findik",
+                 args="-d",
                  pidfile="/var/run/findik.pid",
                  donotify=True)
 
