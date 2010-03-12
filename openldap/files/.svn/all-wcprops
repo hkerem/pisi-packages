@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/pardus/!svn/ver/63819/2009/devel/server/openldap/files
+END
+gencert.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/gencert.sh
+END
+db.patch
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/db.patch
+END
+slapd.conf.patch
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/slapd.conf.patch
+END
+openldap-2.4.11-libldap_r.patch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/63819/2009/devel/server/openldap/files/openldap-2.4.11-libldap_r.patch
+END
+slapd.conf
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/slapd.conf
+END
+openldap-2.2.6-ntlm.patch
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/openldap-2.2.6-ntlm.patch
+END
+pie.patch
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/pie.patch
+END
+openldap-2.3.24-contrib-smbk5pwd.patch
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/pardus/!svn/ver/62986/2009/devel/server/openldap/files/openldap-2.3.24-contrib-smbk5pwd.patch
+END
+openldap-2.4-ppolicy.patch
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/pardus/!svn/ver/63819/2009/devel/server/openldap/files/openldap-2.4-ppolicy.patch
+END

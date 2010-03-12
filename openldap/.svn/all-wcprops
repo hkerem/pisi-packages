@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/pardus/!svn/ver/82184/2009/devel/server/openldap
+END
+translations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pardus/!svn/ver/62986/2009/devel/server/openldap/translations.xml
+END
+actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/pardus/!svn/ver/65808/2009/devel/server/openldap/actions.py
+END
+pspec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/pardus/!svn/ver/82184/2009/devel/server/openldap/pspec.xml
+END

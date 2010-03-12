@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pardus/!svn/ver/87967/2009/devel/programming/language/php/php/files
+END
+php5.2.0-mysql-readmycnf.patch
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/pardus/!svn/ver/63008/2009/devel/programming/language/php/php/files/php5.2.0-mysql-readmycnf.patch
+END
+70_mod_php5.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pardus/!svn/ver/63008/2009/devel/programming/language/php/php/files/70_mod_php5.conf
+END
+go-pear
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/pardus/!svn/ver/71222/2009/devel/programming/language/php/php/files/go-pear
+END
+php5.2.0-mysqli-readmycnf.patch
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/pardus/!svn/ver/63008/2009/devel/programming/language/php/php/files/php5.2.0-mysqli-readmycnf.patch
+END
+system-timezone.patch
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/pardus/!svn/ver/63008/2009/devel/programming/language/php/php/files/system-timezone.patch
+END
+php5-imap-symlink.diff
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/pardus/!svn/ver/63008/2009/devel/programming/language/php/php/files/php5-imap-symlink.diff
+END
+suhosin-patch-5.2.13-0.9.7.patch.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/pardus/!svn/ver/87967/2009/devel/programming/language/php/php/files/suhosin-patch-5.2.13-0.9.7.patch.bz2
+END
+use-devurandom.patch
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pardus/!svn/ver/63008/2009/devel/programming/language/php/php/files/use-devurandom.patch
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/pardus/!svn/ver/71497/2009/devel/server/openldap/comar
+END
+slurpd.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pardus/!svn/ver/71497/2009/devel/server/openldap/comar/slurpd.py
+END
+package.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pardus/!svn/ver/62986/2009/devel/server/openldap/comar/package.py
+END
+slapd.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/pardus/!svn/ver/62986/2009/devel/server/openldap/comar/slapd.py
+END
