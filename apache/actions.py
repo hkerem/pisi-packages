@@ -9,6 +9,7 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
+import os
 
 WorkDir = "httpd-%s" % get.srcVERSION()
 
@@ -140,5 +141,3 @@ def install():
 
     pisitools.dodoc("ABOUT_APACHE", "CHANGES", "LAYOUT", "LICENSE", "README*")
 
-    os.system('mkdir /etc/apache2/certs/')
-    os.system('echo -e "ME\nRohan\nCalenardhon\nRohirrim\n\n*\nrohirrim@example.com\n"|openssl req $@ -new -x509 -days 3650 -nodes -out /etc/apache2/certs/apache.pem -keyout /etc/apache2/certs/apache.pem')

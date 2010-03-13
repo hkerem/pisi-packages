@@ -55,6 +55,7 @@
             <AdditionalFile target="/etc/apache2/modules.d/40_mod_ssl.conf" permission="0644" owner="root">40_mod_ssl.conf</AdditionalFile>
             <AdditionalFile target="/etc/apache2/modules.d/45_mod_dav.conf" permission="0644" owner="root">45_mod_dav.conf</AdditionalFile>
             <AdditionalFile target="/etc/apache2/modules.d/46_mod_ldap.conf" permission="0644" owner="root">46_mod_ldap.conf</AdditionalFile>
+            <AdditionalFile target="/etc/apache2/certs/apache.pem" permission="0644" owner="root">apache.pem</AdditionalFile>
             <!-- Default webroot -->
             <AdditionalFile target="/var/www/localhost/htdocs/apache.css" permission="0755" owner="root">webroot/apache.css</AdditionalFile>
             <AdditionalFile target="/var/www/localhost/htdocs/apache_pb.gif" permission="0755" owner="root">webroot/apache_pb.gif</AdditionalFile>
