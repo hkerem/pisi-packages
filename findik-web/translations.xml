@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>findik-web</Name>
+        <Summary xml:lang="tr">Tarayıcı tabanlı FINDIK Yönetim Aracı</Summary>
+        <Description xml:lang="tr">Bir içerik filtreleme yazılımı olan FINDIKı yönetmek için kullanılan tarayıcı tabanlı bir yönetim aracı</Description>
+    </Source>
+</PISI>

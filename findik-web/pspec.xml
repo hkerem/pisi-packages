@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>findik-web</Name>
+        <Homepage>http://findikproject.org/</Homepage>
+        <Packager>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medrateknoloji.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Browser based FINDIK Admin Tool</Summary>
+        <Description>Browser based admin tool for FINDIK project. FINDIK project is a content filtering application.</Description>
+        <Archive sha1sum="2f7d4a0d585d3952773f5641cdd3f446a3de64fe" type="targz">mirrors://sourceforge/findik-web/findik-web-0.2h.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>findik-web</Name>
+        <RuntimeDependencies>
+            <Dependency>mod_php</Dependency>
+            <Dependency>apache</Dependency>
+            <Dependency>findik</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/var/www/localhost/htdocs</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/var/www/localhost/htdocs/findik/index.php">index.php</AdditionalFile>
+         </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-03-20</Date>
+            <Version>0.2h</Version>
+            <Comment>First release.</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medrateknoloji.com</Email>
+        </Update>
+    </History>
+</PISI>
