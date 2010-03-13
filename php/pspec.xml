@@ -99,6 +99,13 @@
     </Package>
 
     <History>
+        <Update release="77">
+            <Date>2009-06-29</Date>
+            <Version>5.2.13</Version>
+            <Comment>ihebele</Comment>
+            <Name>hubeleeee</Name>
+            <Email>pinar@pardus.org.tr</Email>
+        </Update>
         <Update release="76" type="security">
             <Date>2010-03-02</Date>
             <Version>5.2.13</Version>

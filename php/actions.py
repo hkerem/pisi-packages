@@ -52,6 +52,7 @@ def setup():
                       --with-zend-vm=SWITCH \
                       --with-pic \
                       --with-gnu-ld \
+                      --with-openssl \
                       --with-system-tzdata=/usr/share/zoneinfo \
                       --with-mcrypt=/usr/bin/mcrypt"
 
