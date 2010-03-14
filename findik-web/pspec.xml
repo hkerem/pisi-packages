@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Browser based FINDIK Admin Tool</Summary>
         <Description>Browser based admin tool for FINDIK project. FINDIK project is a content filtering application.</Description>
-        <Archive sha1sum="1e4e75be1e29944d0566418067c5ca468209c020" type="targz">mirrors://sourceforge/findik-web/findik-web-0.3.4.tar.gz</Archive>
+        <Archive sha1sum="9442a0c2ff0d943f3d1d2ca1e55ecfec74b507eb" type="targz">mirrors://sourceforge/findik-web/findik-web-0.3.4.tar.gz</Archive>
     </Source>
 
     <Package>
