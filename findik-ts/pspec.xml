@@ -38,6 +38,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2010-04-15</Date>
+            <Version>0.2</Version>
+            <Comment>Bug fix in pyinotify script - ZDERROR</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medratech.com</Email>
+        </Update>
         <Update release="3">
             <Date>2010-04-03</Date>
             <Version>0.2</Version>
