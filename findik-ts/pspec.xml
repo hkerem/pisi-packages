@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>findik-ts</Name>
+        <Homepage>http://findikproject.org/</Homepage>
+        <Packager>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medrateknoloji.com</Email>
+        </Packager>
+        <License>Proprietary</License>
+        <IsA>app:console</IsA>
+        <Summary>Trusted timestamping with TUBITAK UEKAE ZamaneConsole</Summary>
+        <Description>Trusted timestamping with TUBITAK UEKAE ZamaneConsole. TS API URL is http://www.kamusm.gov.tr/tr/Hizmetler/Zamandamgasi/</Description>
+        <Archive sha1sum="ed6d0e2dc08bd736979f27aeddada02245ac7301" type="zip">http://www.kamusm.gov.tr/tr/Hizmetler/Zamandamgasi/ZamaneConsole-1.1.9.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>findik-ts</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+            <Dependency>findik</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/var/lib/findik/ts</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/bin/findik-generate-ts" permission="0755" owner="root">findik_generate_ts.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-03-21</Date>
+            <Version>0.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medrateknoloji.com</Email>
+        </Update>
+    </History>
+</PISI>
