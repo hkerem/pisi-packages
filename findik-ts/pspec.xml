@@ -23,10 +23,12 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/var/lib/findik/ts</Path>
+            <Path fileType="config">/etc/logrotate.d</Path>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile target="/usr/bin/findik-generate-ts" permission="0755" owner="root">findik_generate_ts.sh</AdditionalFile>
+            <AdditionalFile target="/etc/logrotate.d/findik" permission="0644" owner="root">findik.logrotate</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

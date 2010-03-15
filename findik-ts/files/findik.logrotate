@@ -1,0 +1,14 @@
+/var/log/findik/*log {
+    compress
+    missingok
+    notifempty
+    sharedscripts
+    postrotate
+        /bin/service findik stop || true
+        /usr/bin/findik-generate-ts /var/log/findik/filter.log.gz
+    endscript
+    postrotate
+        /bin/service findik start || true
+        /usr/bin/findik-generate-ts /var/log/findik/filter.log.gz
+    endscript
+}
