@@ -24,10 +24,26 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/var/www/localhost/htdocs</Path>
+            <Path fileType="config">/etc/apache2</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/apache2/httpd.conf" permission="0644" owner="root">httpd.conf</AdditionalFile>
+            <!-- Vhosts configuration -->
+            <AdditionalFile target="/etc/apache2/vhosts.d/01_ssl_vhost.conf" permission="0644" owner="root">01_ssl_vhost.conf</AdditionalFile>
+            <!-- Modules configuration -->
+            <AdditionalFile target="/etc/apache2/modules.d/40_mod_ssl.conf" permission="0644" owner="root">40_mod_ssl.conf</AdditionalFile>
+            <AdditionalFile target="/etc/apache2/certs/apache.pem" permission="0644" owner="root">apache.pem</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2010-03-22</Date>
+            <Version>0.2i</Version>
+            <Comment>HTTPS Modifications to Apache Web Server</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medrateknoloji.com</Email>
+        </Update>
         <Update release="2">
             <Date>2010-03-21</Date>
             <Version>0.2i</Version>
