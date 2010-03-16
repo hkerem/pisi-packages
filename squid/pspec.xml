@@ -25,6 +25,7 @@
         </Patches>
         <BuildDependencies>
             <Dependency>perl</Dependency>
+            <Dependency>libwww</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -32,6 +33,7 @@
         <Name>squid</Name>
         <RuntimeDependencies>
             <Dependency>perl</Dependency>
+            <Dependency>libwww</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/squid</Path>
