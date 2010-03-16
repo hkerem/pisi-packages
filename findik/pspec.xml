@@ -22,6 +22,8 @@
             <Dependency>libpcre</Dependency>
             <Dependency>boost</Dependency>
             <Dependency>boost-devel</Dependency>
+            <Dependency>apr-util</Dependency>
+            <Dependency>openssl</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,6 +35,8 @@
             <Dependency>libconfig</Dependency>
             <Dependency>libpcre</Dependency>
             <Dependency>boost</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>apr-util</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
