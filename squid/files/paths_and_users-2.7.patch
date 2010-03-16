@@ -1,7 +1,45 @@
 diff -Nur squid-2.7.STABLE8.old/src/cf.data.pre squid-2.7.STABLE8/src/cf.data.pre
 --- squid-2.7.STABLE8.old/src/cf.data.pre	2009-11-10 00:38:57.000000000 +0200
-+++ squid-2.7.STABLE8/src/cf.data.pre	2010-03-11 15:07:12.922583066 +0200
-@@ -3787,12 +3787,12 @@
++++ squid-2.7.STABLE8/src/cf.data.pre	2010-03-16 21:12:25.346730644 +0200
+@@ -657,7 +657,7 @@
+ #Recommended minimum configuration:
+ acl all src all
+ acl manager proto cache_object
+-acl localhost src 127.0.0.1/32
++acl localhost src 127.0.0.0/8
+ acl to_localhost dst 127.0.0.0/8 0.0.0.0/32
+ #
+ # Example rule allowing access from your local networks.
+@@ -709,8 +709,8 @@
+ #Recommended minimum configuration:
+ #
+ # Only allow cachemgr access from localhost
+-http_access allow manager localhost
+-http_access deny manager
++#http_access allow manager localhost
++#http_access deny manager
+ # Deny requests to unknown ports
+ http_access deny !Safe_ports
+ # Deny CONNECT to other than SSL ports
+@@ -719,14 +719,15 @@
+ # We strongly recommend the following be uncommented to protect innocent
+ # web applications running on the proxy server who think the only
+ # one who can access services on "localhost" is a local user
+-#http_access deny to_localhost
++http_access deny to_localhost
+ #
+ # INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
+ 
+ # Example rule allowing access from your local networks.
+ # Adapt localnet in the ACL section to list your (internal) IP networks
+ # from where browsing should be allowed
+-http_access allow localnet
++#http_access allow localnet
++http_access allow localhost
+ 
+ # And finally deny all other access to this proxy
+ http_access deny all
+@@ -3787,12 +3788,12 @@
  
  NAME: cache_effective_user
  TYPE: string
