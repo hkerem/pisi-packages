@@ -21,12 +21,12 @@ def check_conf():
 def check_cachedir():
     import os
     if os.path.exists("/var/cache/squid") and not os.path.exists("/var/cache/squid/00"):
-        run("/usr/sbin/squid", "-z")
+        os.system("/usr/sbin/squid -z")
 
 @synchronized
 def start():
     check_cachedir()
-    check_conf()
+#    check_conf()
     import os
     os.system("/usr/sbin/squid -DYC")
 #    startService(command="/usr/sbin/squid",
