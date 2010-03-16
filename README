@@ -3,3 +3,6 @@ PISI Packages
 In order to build a package, you should call
  pisi build pspec.xml
 on a Pardus system.
+
+To build all;
+ for i in *; do [ -d $i ] && (cd $i; pisi --ignore-sandbox build pspec.xml); done
