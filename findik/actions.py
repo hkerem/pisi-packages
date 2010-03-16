@@ -10,7 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="hkerem-findik-2315312"
+WorkDir="hkerem-findik-4e16045"
 
 def setup():
     shelltools.system("./autogen.sh")
