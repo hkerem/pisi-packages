@@ -12,8 +12,8 @@
         <IsA>server.contentfilter</IsA>
         <Summary>FINDIK is a free open-source content filtering framework for TCP protocols.</Summary>
         <Description>Main objective of the project is to develop a secure, generic infrastructure for protocol integration and support common communication techniques. In order to avoid users to reimplement communication and proxying algorithms, FINDIK API enforce user to work in a very simple and service oriented way. As a result, user could be focused on just protocol implementation and filtering operations.</Description>
-        <Archive sha1sum="e1a0aefe88db440924629b70a6c7f196675396f6" type="targz">
-            http://192.168.1.117/findik-0.2h.tar.gz
+        <Archive sha1sum="0d5494dc80b040ffad1f06e02896807ca53b8a1f" type="targz">
+            http://github.com/hkerem/findik/tarball/v0.2i
         </Archive>
         <BuildDependencies>
             <Dependency>mysql++</Dependency>
@@ -61,6 +61,13 @@
     </Package>
 
     <History>
+        <Update release="1">
+            <Date>2010-03-22</Date>
+            <Version>0.2i</Version>
+            <Comment>Version update.</Comment>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Update>
         <Update release="1">
             <Date>2010-02-27</Date>
             <Version>0.2h</Version>

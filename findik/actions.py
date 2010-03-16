@@ -10,7 +10,10 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
+WorkDir="hkerem-findik-2315312"
+
 def setup():
+    shelltools.system("./autogen.sh")
     autotools.configure("--enable-magic=no \
                         --enable-clamdav=no \
                         --enable-fileext=no \
