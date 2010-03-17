@@ -4,11 +4,13 @@
 # Licensed under the GNU General Public License, version 2.
 # See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 from comar.service import *
+import os
 
 serviceType = "server"
 serviceDesc = _({"en": "FINDIK Content Filter",
                  "tr": "FINDIK Icerik Filtresi"
                  })
+serviceDefault = "on"
 
 #def check_config():
 #    import os
@@ -20,16 +22,20 @@ serviceDesc = _({"en": "FINDIK Content Filter",
 
 @synchronized
 def start():
-#    check_config()
-    startService(command="/usr/bin/findik",
-                 args="-d",
-                 pidfile="/var/run/findik.pid",
-                 donotify=True)
+#    startService(command="/usr/bin/findik",
+#                 args="-d",
+#                 pidfile="/var/run/findik.pid",
+#                 donotify=True)
+    startDependencies("mysql_server")
+    startDependencies("squid")
+    os.system('/usr/share/findik/scripts/wait_for_mysqld')
+    os.system('/sbin/start-stop-daemon --start --exec /usr/bin/findik -- -d')
 
 @synchronized
 def stop():
-    stopService(pidfile="/var/run/findik.pid",
-                donotify=True)
+#    stopService(pidfile="/var/run/findik.pid",
+#                donotify=True)
+    os.system('/sbin/start-stop-daemon --stop --exec /usr/bin/findik')
 
 def status():
-    return isServiceRunning("/var/run/findik.pid")
+    return isServiceRunning(command="/usr/bin/findik")
