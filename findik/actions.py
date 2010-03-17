@@ -27,6 +27,4 @@ def build():
 def install():
     autotools.install()
     pisitools.dodir("/var/log/findik")
-    shelltools.copy("packaging/pardus/findik-postinst",
-            "%s/usr/share/findik/scripts/" % get.installDIR())
 

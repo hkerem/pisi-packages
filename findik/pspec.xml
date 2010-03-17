@@ -49,11 +49,9 @@
             <Path fileType="data">/usr/share</Path>
             <Path fileType="data">/var/log/findik</Path>
         </Files>
-        <!--
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target=""></AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/findik/scripts/findik-postinst">findik-postinst</AdditionalFile>
         </AdditionalFiles>
-        -->
         <Provides>
             <COMAR script="service.py">System.Service</COMAR>
             <COMAR script="package.py">System.Package</COMAR>

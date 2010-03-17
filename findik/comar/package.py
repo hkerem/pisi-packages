@@ -7,5 +7,6 @@
 
 import os
 
-def postInstall():
-    os.execv('/usr/share/findik/scripts/findik-postinst', [])
+def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+    os.system('/bin/chown -R daemon.daemon /var/log/findik')
+    os.system('/usr/share/findik/scripts/findik-postinst')

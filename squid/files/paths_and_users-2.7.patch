@@ -10,17 +10,6 @@ diff -Nur squid-2.7.STABLE8.old/src/cf.data.pre squid-2.7.STABLE8/src/cf.data.pr
  acl to_localhost dst 127.0.0.0/8 0.0.0.0/32
  #
  # Example rule allowing access from your local networks.
-@@ -709,8 +709,8 @@
- #Recommended minimum configuration:
- #
- # Only allow cachemgr access from localhost
--http_access allow manager localhost
--http_access deny manager
-+#http_access allow manager localhost
-+#http_access deny manager
- # Deny requests to unknown ports
- http_access deny !Safe_ports
- # Deny CONNECT to other than SSL ports
 @@ -719,14 +719,15 @@
  # We strongly recommend the following be uncommented to protect innocent
  # web applications running on the proxy server who think the only
