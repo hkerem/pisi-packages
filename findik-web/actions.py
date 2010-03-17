@@ -11,5 +11,5 @@ from pisi.actionsapi import pisitools
 WorkDir="findik"
 
 def install():
-    pisitools.insinto("/var/www/localhost/htdocs/findik", "*")
+    pisitools.insinto("/var/www/findik-web/findik", "*")
 
