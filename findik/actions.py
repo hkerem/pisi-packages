@@ -10,7 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="hkerem-findik-4e16045"
+WorkDir="hkerem-findik-c70472c"
 
 def setup():
     shelltools.system("./autogen.sh")
@@ -27,4 +27,5 @@ def build():
 def install():
     autotools.install()
     pisitools.dodir("/var/log/findik")
+    pisitools.dodir("/var/run/findik")
 
