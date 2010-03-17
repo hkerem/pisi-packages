@@ -37,6 +37,8 @@
             <Dependency>boost</Dependency>
             <Dependency>openssl</Dependency>
             <Dependency>apr-util</Dependency>
+            <Dependency>mysql-server</Dependency>
+            <Dependency>squid</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
