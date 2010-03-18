@@ -1,0 +1,75 @@
+diff -Nur squid-3.0.STABLE24.old/configure squid-3.0.STABLE24/configure
+--- squid-3.0.STABLE24.old/configure	2010-02-12 15:53:20.000000000 +0200
++++ squid-3.0.STABLE24/configure	2010-03-11 15:42:14.567768478 +0200
+@@ -1933,7 +1933,7 @@
+                           both]
+   --with-tags[=TAGS]      include additional configurations [automatic]
+   --with-default-user=USER System user account for squid permissions.
+-                         default: nobody
++                         default: squid
+   --with-aufs-threads=N_THREADS
+                           Tune the number of worker threads for the aufs object
+                           store.
+@@ -21467,7 +21467,7 @@
+ _ACEOF
+ 
+ 
+-CACHE_EFFECTIVE_USER="nobody"
++CACHE_EFFECTIVE_USER="squid"
+ 
+ # Check whether --with-default-user was given.
+ if test "${with_default_user+set}" = set; then
+diff -Nur squid-3.0.STABLE24.old/configure.in squid-3.0.STABLE24/configure.in
+--- squid-3.0.STABLE24.old/configure.in	2010-02-12 15:53:20.000000000 +0200
++++ squid-3.0.STABLE24/configure.in	2010-03-11 15:42:28.390922901 +0200
+@@ -98,10 +98,10 @@
+ 
+ AC_DEFINE_UNQUOTED(SQUID_CONFIGURE_OPTIONS, "$ac_configure_args", [configure command line used to configure Squid])
+ 
+-CACHE_EFFECTIVE_USER="nobody"
++CACHE_EFFECTIVE_USER="squid"
+ AC_ARG_WITH(default-user,
+  [  --with-default-user=USER System user account for squid permissions.
+-                         default: nobody],
++                         default: squid],
+  [ CACHE_EFFECTIVE_USER="$withval" ]
+ )
+ AC_SUBST(CACHE_EFFECTIVE_USER)
+diff -Nur squid-3.0.STABLE24.old/src/Makefile.am squid-3.0.STABLE24/src/Makefile.am
+--- squid-3.0.STABLE24.old/src/Makefile.am	2010-02-12 15:53:16.000000000 +0200
++++ squid-3.0.STABLE24/src/Makefile.am	2010-03-11 15:41:34.433748071 +0200
+@@ -995,12 +995,12 @@
+ DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
+ DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
+ DEFAULT_DNSSERVER       = $(libexecdir)/`echo dnsserver | sed '$(transform);s/$$/$(EXEEXT)/'`
+-DEFAULT_LOG_PREFIX	= $(localstatedir)/logs
++DEFAULT_LOG_PREFIX	= $(localstatedir)/log/squid
+ DEFAULT_CACHE_LOG       = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG      = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG       = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE        = $(DEFAULT_LOG_PREFIX)/squid.pid
+-DEFAULT_SWAP_DIR        = $(localstatedir)/cache
++DEFAULT_PID_FILE        = $(localstatedir)/run/squid.pid
++DEFAULT_SWAP_DIR        = $(localstatedir)/cache/squid
+ DEFAULT_PINGER		= $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD		= $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD		= $(libexecdir)/`echo diskd | sed '$(transform);s/$$/$(EXEEXT)/'`
+diff -Nur squid-3.0.STABLE24.old/src/Makefile.in squid-3.0.STABLE24/src/Makefile.in
+--- squid-3.0.STABLE24.old/src/Makefile.in	2010-02-12 15:53:16.000000000 +0200
++++ squid-3.0.STABLE24/src/Makefile.in	2010-03-11 15:40:54.848293873 +0200
+@@ -2659,12 +2659,12 @@
+ DEFAULT_CONFIG_FILE = $(sysconfdir)/squid.conf
+ DEFAULT_MIME_TABLE = $(sysconfdir)/mime.conf
+ DEFAULT_DNSSERVER = $(libexecdir)/`echo dnsserver | sed '$(transform);s/$$/$(EXEEXT)/'`
+-DEFAULT_LOG_PREFIX = $(localstatedir)/logs
++DEFAULT_LOG_PREFIX = $(localstatedir)/log/squid
+ DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE = $(DEFAULT_LOG_PREFIX)/squid.pid
+-DEFAULT_SWAP_DIR = $(localstatedir)/cache
++DEFAULT_PID_FILE = $(localstatedir)/run/squid.pid
++DEFAULT_SWAP_DIR = $(localstatedir)/cache/squid
+ DEFAULT_PINGER = $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD = $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD = $(libexecdir)/`echo diskd | sed '$(transform);s/$$/$(EXEEXT)/'`

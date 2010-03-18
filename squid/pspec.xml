@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>squid</Name>
+        <Homepage>http://www.squid-cache.org/</Homepage>
+        <Packager>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>server.cache</IsA>
+        <Summary>Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more.</Summary>
+        <Description>Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.</Description>
+        <Archive sha1sum="f758e94c4d1517a508766dc44463f4c05095c148" type="targz">
+            ftp://ftp.ulak.net.tr/squid/squid-2.7.STABLE8.tar.gz
+        </Archive>
+        <!--
+        <Archive sha1sum="9d97691bfb5c1f0b8f675de7dc37bbd22e08c951" type="targz">
+            ftp://ftp.ulak.net.tr/squid/squid-3.0.STABLE24.tar.gz
+        </Archive>
+        -->
+        <Patches>
+            <Patch level="1">paths_and_users-2.7.patch</Patch>
+        </Patches>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>squid</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/squid</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/var/</Path>
+        </Files>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-03-04</Date>
+            <Version>2.7.8</Version>
+            <Comment>First release.</Comment>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medratech.com</Email>
+        </Update>
+    </History>
+</PISI>
+

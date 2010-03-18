@@ -1,0 +1,58 @@
+diff -Nur squid-2.7.STABLE8.old/src/cf.data.pre squid-2.7.STABLE8/src/cf.data.pre
+--- squid-2.7.STABLE8.old/src/cf.data.pre	2009-11-10 00:38:57.000000000 +0200
++++ squid-2.7.STABLE8/src/cf.data.pre	2010-03-11 15:07:12.922583066 +0200
+@@ -3787,12 +3787,12 @@
+ 
+ NAME: cache_effective_user
+ TYPE: string
+-DEFAULT: nobody
++DEFAULT: squid
+ LOC: Config.effectiveUser
+ DOC_START
+ 	If you start Squid as root, it will change its effective/real
+ 	UID/GID to the user specified below.  The default is to change
+-	to UID to nobody.  If you define cache_effective_user, but not
++	to UID to squid.  If you define cache_effective_user, but not
+ 	cache_effective_group, Squid sets the GID to the effective
+ 	user's default group ID (taken from the password file) and
+ 	supplementary group list from the from groups membership of
+diff -Nur squid-2.7.STABLE8.old/src/Makefile.am squid-2.7.STABLE8/src/Makefile.am
+--- squid-2.7.STABLE8.old/src/Makefile.am	2008-01-02 17:50:39.000000000 +0200
++++ squid-2.7.STABLE8/src/Makefile.am	2010-03-11 15:07:12.922583066 +0200
+@@ -340,13 +340,13 @@
+ DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
+ DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
+ DEFAULT_DNSSERVER       = $(libexecdir)/`echo dnsserver | sed '$(transform);s/$$/$(EXEEXT)/'`
+-DEFAULT_LOG_PREFIX	= $(localstatedir)/logs
++DEFAULT_LOG_PREFIX	= $(localstatedir)/log/squid
+ DEFAULT_CACHE_LOG       = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG      = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG       = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE        = $(DEFAULT_LOG_PREFIX)/squid.pid
++DEFAULT_PID_FILE        = $(localstatedir)/run/squid.pid
+ DEFAULT_NETDB_FILE      = $(DEFAULT_LOG_PREFIX)/netdb.state
+-DEFAULT_SWAP_DIR        = $(localstatedir)/cache
++DEFAULT_SWAP_DIR        = $(localstatedir)/cache/squid
+ DEFAULT_PINGER		= $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD		= $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD		= $(libexecdir)/`echo diskd-daemon | sed '$(transform);s/$$/$(EXEEXT)/'`
+diff -Nur squid-2.7.STABLE8.old/src/Makefile.in squid-2.7.STABLE8/src/Makefile.in
+--- squid-2.7.STABLE8.old/src/Makefile.in	2009-05-01 04:24:42.000000000 +0300
++++ squid-2.7.STABLE8/src/Makefile.in	2010-03-11 15:07:49.857647766 +0200
+@@ -613,13 +613,13 @@
+ DEFAULT_CONFIG_FILE = $(sysconfdir)/squid.conf
+ DEFAULT_MIME_TABLE = $(sysconfdir)/mime.conf
+ DEFAULT_DNSSERVER = $(libexecdir)/`echo dnsserver | sed '$(transform);s/$$/$(EXEEXT)/'`
+-DEFAULT_LOG_PREFIX = $(localstatedir)/logs
++DEFAULT_LOG_PREFIX = $(localstatedir)/log/squid
+ DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE = $(DEFAULT_LOG_PREFIX)/squid.pid
++DEFAULT_PID_FILE = $(localstatedir)/run/squid.pid
+ DEFAULT_NETDB_FILE = $(DEFAULT_LOG_PREFIX)/netdb.state
+-DEFAULT_SWAP_DIR = $(localstatedir)/cache
++DEFAULT_SWAP_DIR = $(localstatedir)/cache/squid
+ DEFAULT_PINGER = $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD = $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD = $(libexecdir)/`echo diskd-daemon | sed '$(transform);s/$$/$(EXEEXT)/'`
