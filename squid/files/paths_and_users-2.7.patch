@@ -1,6 +1,6 @@
 diff -Nur squid-2.7.STABLE8.old/src/cf.data.pre squid-2.7.STABLE8/src/cf.data.pre
 --- squid-2.7.STABLE8.old/src/cf.data.pre	2009-11-10 00:38:57.000000000 +0200
-+++ squid-2.7.STABLE8/src/cf.data.pre	2010-03-16 21:12:25.346730644 +0200
++++ squid-2.7.STABLE8/src/cf.data.pre	2010-03-27 13:42:53.547240143 +0200
 @@ -657,7 +657,7 @@
  #Recommended minimum configuration:
  acl all src all
@@ -28,6 +28,15 @@ diff -Nur squid-2.7.STABLE8.old/src/cf.data.pre squid-2.7.STABLE8/src/cf.data.pr
  
  # And finally deny all other access to this proxy
  http_access deny all
+@@ -1226,7 +1227,7 @@
+ 
+ NOCOMMENT_START
+ # Squid normally listens to port 3128
+-http_port @DEFAULT_HTTP_PORT@
++http_port @DEFAULT_HTTP_PORT@ transparent
+ NOCOMMENT_END
+ DOC_END
+ 
 @@ -3787,12 +3788,12 @@
  
  NAME: cache_effective_user
@@ -45,7 +54,7 @@ diff -Nur squid-2.7.STABLE8.old/src/cf.data.pre squid-2.7.STABLE8/src/cf.data.pr
  	supplementary group list from the from groups membership of
 diff -Nur squid-2.7.STABLE8.old/src/Makefile.am squid-2.7.STABLE8/src/Makefile.am
 --- squid-2.7.STABLE8.old/src/Makefile.am	2008-01-02 17:50:39.000000000 +0200
-+++ squid-2.7.STABLE8/src/Makefile.am	2010-03-11 15:07:12.922583066 +0200
++++ squid-2.7.STABLE8/src/Makefile.am	2010-03-27 13:42:23.818258355 +0200
 @@ -340,13 +340,13 @@
  DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
  DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
@@ -65,7 +74,7 @@ diff -Nur squid-2.7.STABLE8.old/src/Makefile.am squid-2.7.STABLE8/src/Makefile.a
  DEFAULT_DISKD		= $(libexecdir)/`echo diskd-daemon | sed '$(transform);s/$$/$(EXEEXT)/'`
 diff -Nur squid-2.7.STABLE8.old/src/Makefile.in squid-2.7.STABLE8/src/Makefile.in
 --- squid-2.7.STABLE8.old/src/Makefile.in	2009-05-01 04:24:42.000000000 +0300
-+++ squid-2.7.STABLE8/src/Makefile.in	2010-03-11 15:07:49.857647766 +0200
++++ squid-2.7.STABLE8/src/Makefile.in	2010-03-27 13:42:23.818258355 +0200
 @@ -613,13 +613,13 @@
  DEFAULT_CONFIG_FILE = $(sysconfdir)/squid.conf
  DEFAULT_MIME_TABLE = $(sysconfdir)/mime.conf
