@@ -20,19 +20,30 @@
         <RuntimeDependencies>
             <Dependency>sun-jre</Dependency>
             <Dependency>findik</Dependency>
+            <Dependency>pyinotify</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/var/lib/findik/ts</Path>
-            <Path fileType="config">/etc/logrotate.d</Path>
+            <Path fileType="library">/usr/share/findik/ts</Path>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile target="/usr/bin/findik-generate-ts" permission="0755" owner="root">findik_generate_ts.sh</AdditionalFile>
-            <AdditionalFile target="/etc/logrotate.d/findik" permission="0644" owner="root">findik.logrotate</AdditionalFile>
+            <AdditionalFile target="/usr/share/findik/ts/findik-pyinotify.py" permission="0644" owner="root">findik-pyinotify.py</AdditionalFile>
         </AdditionalFiles>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2010-04-03</Date>
+            <Version>0.2</Version>
+            <Comment>PyInotify script and COMAR Services Added</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medrateknoloji.com</Email>
+        </Update>
         <Update release="1">
             <Date>2010-03-21</Date>
             <Version>0.1</Version>

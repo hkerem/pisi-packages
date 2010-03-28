@@ -11,5 +11,5 @@ from pisi.actionsapi import pisitools
 WorkDir="ZamaneConsole-1.1.9"
 
 def install():
-    pisitools.insinto("/var/lib/findik/ts", "*")
+    pisitools.insinto("/usr/share/findik/ts", "*")
 
