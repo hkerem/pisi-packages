@@ -12,28 +12,20 @@ serviceDesc = _({"en": "FINDIK Timestamping Service",
                  })
 serviceDefault = "on"
 
-#def check_config():
-#    import os
-#    if not os.path.exists("/etc/ssh/sshd_config"):
-#        fail(MSG_ERR_NEEDCONF)
-#    if not os.path.exists("/etc/ssh/ssh_host_key"):
-#        run("/usr/bin/ssh-keygen", "-t", "rsa1", "-b", "1024",
-#            "-f", "/etc/ssh/ssh_host_key", "-N", "")
-
 @synchronized
 def start():
-#    startService(command="/usr/bin/findik",
-#                 args="-d",
-#                 pidfile="/var/run/findik.pid",
-#                 donotify=True)
     startDependencies("findik")
+    startService(command="/usr/bin/python",
+                args="/usr/share/findik/ts/findik-pyinotify.py",
+                pidfile="/var/run/findik/findik-ts.pid",
+                detach=True,
+                donotify=True)
     os.system('/usr/bin/python /usr/share/findik/ts/findik-pyinotify.py')
 
 @synchronized
 def stop():
-#    stopService(pidfile="/var/run/findik.pid",
-#                donotify=True)
-    os.system("/usr/bin/kill -9 $(ps aux |grep findik-pyinotify.py|awk '{ print $2 }')")
+    stopService(pidfile="/var/run/findik/findik-ts.pid",
+                donotify=True)
 
 def status():
-    return isServiceRunning(command="/usr/bin/python /usr/share/findik/ts/findik-pyinotify.py")
+    return isServiceRunning(pidfile="/var/run/findik/findik-ts.pid")
