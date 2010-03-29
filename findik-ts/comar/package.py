@@ -9,4 +9,9 @@ import os
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     os.system('/bin/mkdir -p /var/log/findik/ts')
-    os.system('touch /var/log/findik/ts/timestamp.log')
+    os.system('/bin/touch /var/log/findik/ts/timestamp.log')
+    os.system('/bin/service findik-ts on')
+    os.system('/bin/service findik-ts start')
+
+def preRemove():
+    os.system('/bin/service findik-ts stop')

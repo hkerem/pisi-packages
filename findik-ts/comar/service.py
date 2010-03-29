@@ -15,11 +15,6 @@ serviceDefault = "on"
 @synchronized
 def start():
     startDependencies("findik")
-    startService(command="/usr/bin/python",
-                args="/usr/share/findik/ts/findik-pyinotify.py",
-                pidfile="/var/run/findik/findik-ts.pid",
-                detach=True,
-                donotify=True)
     os.system('/usr/bin/python /usr/share/findik/ts/findik-pyinotify.py')
 
 @synchronized
