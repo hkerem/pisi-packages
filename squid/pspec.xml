@@ -9,7 +9,7 @@
             <Email>kerem@medratech.com</Email>
         </Packager>
         <License>GPL</License>
-        <IsA>server.cache</IsA>
+        <IsA>service</IsA>
         <Summary>Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more.</Summary>
         <Description>Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.</Description>
         <Archive sha1sum="f758e94c4d1517a508766dc44463f4c05095c148" type="targz">

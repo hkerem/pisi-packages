@@ -9,7 +9,7 @@
             <Email>kerem@medratech.com</Email>
         </Packager>
         <License>GPL</License>
-        <IsA>server.contentfilter</IsA>
+        <IsA>service</IsA>
         <Summary>FINDIK is a free open-source content filtering framework for TCP protocols.</Summary>
         <Description>Main objective of the project is to develop a secure, generic infrastructure for protocol integration and support common communication techniques. In order to avoid users to reimplement communication and proxying algorithms, FINDIK API enforce user to work in a very simple and service oriented way. As a result, user could be focused on just protocol implementation and filtering operations.</Description>
         <Archive sha1sum="09ed49e4405e5042ff57b65dd1e5578fae1a95e8" type="targz">
