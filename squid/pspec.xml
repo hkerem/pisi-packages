@@ -34,6 +34,7 @@
         <RuntimeDependencies>
             <Dependency>perl</Dependency>
             <Dependency>libwww</Dependency>
+            <Dependency>libcap</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/squid</Path>
