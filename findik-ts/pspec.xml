@@ -20,6 +20,7 @@
         <RuntimeDependencies>
             <Dependency>sun-jre</Dependency>
             <Dependency>findik</Dependency>
+            <Dependency>findik-btk-client</Dependency>
             <Dependency>pyinotify</Dependency>
         </RuntimeDependencies>
         <Files>
