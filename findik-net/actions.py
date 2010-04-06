@@ -8,8 +8,6 @@
 from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
 
-WorkDir="findik-network"
-
 def install():
     pisitools.insinto("/usr/share/findik", "*")
 

@@ -12,8 +12,8 @@
         <IsA>service</IsA>
         <Summary>Basic network configuration utility for FINDIK.</Summary>
         <Description>Basic network configuration utility for FINDIK.</Description>
-        <Archive sha1sum="2ca9fb366c0f775887eb831d6ef48ffc7909c01e" type="targz">
-            http://github.com/downloads/hkerem/pisi-packages/findik-network.tar.gz
+        <Archive sha1sum="410ba48563aeaadd5ed2bd97f8c2969f3d37d15b" type="targz">
+            http://github.com/downloads/hkerem/pisi-packages/findik-net-0.1.tar.gz
         </Archive>
     </Source>
 
