@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Browser based FINDIK Admin Tool</Summary>
         <Description>Browser based admin tool for FINDIK project. FINDIK project is a content filtering application.</Description>
-        <Archive sha1sum="78ded354999f14ef9ef58a8aa11a3c2e7eb76bb6" type="targz">mirrors://sourceforge/findik-web/findik-web-0.3.2.tar.gz</Archive>
+        <Archive sha1sum="9442a0c2ff0d943f3d1d2ca1e55ecfec74b507eb" type="targz">mirrors://sourceforge/findik-web/findik-web-0.3.4.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -41,6 +41,27 @@
     </Package>
 
     <History>
+        <Update release="12">
+            <Date>2010-04-13</Date>
+            <Version>0.3.4</Version>
+            <Comment>DB update info fixed</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medratech.com</Email>
+        </Update>
+        <Update release="11">
+            <Date>2010-04-13</Date>
+            <Version>0.3.3</Version>
+            <Comment>Zoom removed</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medratech.com</Email>
+        </Update>
+        <Update release="10">
+            <Date>2010-04-13</Date>
+            <Version>0.3.3</Version>
+            <Comment>Version update</Comment>
+            <Name>Burak Oguz</Name>
+            <Email>burak@medratech.com</Email>
+        </Update>
         <Update release="9">
             <Date>2010-04-09</Date>
             <Version>0.3.2</Version>
