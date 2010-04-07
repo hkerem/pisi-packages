@@ -32,7 +32,6 @@
             <AdditionalFile target="/usr/share/findik-web/apache2/vhosts.d/01_ssl_vhost.conf" permission="0644" owner="root">01_ssl_vhost.conf</AdditionalFile>
             <!-- Modules configuration -->
             <AdditionalFile target="/usr/share/findik-web/apache2/modules.d/40_mod_ssl.conf" permission="0644" owner="root">40_mod_ssl.conf</AdditionalFile>
-            <AdditionalFile target="/usr/share/findik-web/apache2/certs/apache.pem" permission="0644" owner="root">apache.pem</AdditionalFile>
             <AdditionalFile target="/var/www/findik-web/index.php" permission="0644" owner="root">findik-web-index.php</AdditionalFile>
         </AdditionalFiles>
         <Provides>
@@ -41,6 +40,13 @@
     </Package>
 
     <History>
+        <Update release="13">
+            <Date>2010-04-15</Date>
+            <Version>0.3.4</Version>
+            <Comment>Now using FINDIK certificates for HTTPS.</Comment>
+            <Name>H. Kerem Cevahir</Name>
+            <Email>kerem@medra.com.tr</Email>
+        </Update>
         <Update release="12">
             <Date>2010-04-13</Date>
             <Version>0.3.4</Version>

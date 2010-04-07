@@ -15,12 +15,9 @@ def recoverFromBackup(path):
     os.system('/bin/mv -f /etc/apache2/' + path + '.bak /etc/apache2/' + path )
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
-    os.system('/bin/mkdir -p /etc/apache2/certs')
-
     backupAndReplace('httpd.conf')
     backupAndReplace('vhosts.d/01_ssl_vhost.conf')
     backupAndReplace('modules.d/40_mod_ssl.conf')
-    backupAndReplace('certs/apache.pem')
 
     os.system('/bin/service apache on')
     os.system('/bin/service apache start')
@@ -29,5 +26,4 @@ def preRemove():
     recoverFromBackup('httpd.conf')
     recoverFromBackup('vhosts.d/01_ssl_vhost.conf')
     recoverFromBackup('modules.d/40_mod_ssl.conf')
-    recoverFromBackup('certs/apache.pem')
     
